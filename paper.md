@@ -145,7 +145,7 @@ documented REST API with a self-hosted Swagger UI and an OpenAPI 3 schema,
 enabling external tools (course management systems, syllabus generators) to
 assemble books programmatically.
 
-The codebase is implemented in Django and Django REST Framework on the
+The codebase is implemented in a Django and Django REST Framework on the
 backend, React and Vite on the frontend, with PostgreSQL for data,
 RabbitMQ as the Celery broker, and dedicated worker containers for the
 LaTeX build. The entire stack is reproducible via Docker Compose, and a
@@ -161,7 +161,7 @@ with partial funding from National Science Foundation award DMR-1904629,
 and is currently supported by National Science Foundation award
 DMR-2203378. MDG gratefully acknowledges support from the John and Claire
 Bertucci Distinguished Professorship in Engineering at Carnegie Mellon
-University. We thank the authors who have contributed chapters to the
+University. We thank current/future authors who have contributed/will contribute chapters to the
 OpenChapters monorepo, and the maintainers of the `arara`, `biber`, and
 TeX Live projects on which the build pipeline depends.
 
