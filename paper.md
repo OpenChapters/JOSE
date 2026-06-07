@@ -85,7 +85,7 @@ The combination is intended to serve three audiences:
 - **Students** who pay nothing and receive a coherent, professionally
   typeset PDF or HTML site rather than a stack of photocopies.
 - **Authors** who contribute chapters to the shared monorepo and receive
-  citation credit each time their chapter is included in a build.
+  a DOI for each chapter they contribute.
 
 # Functionality
 
@@ -120,9 +120,13 @@ template containing the user's selections, and runs the `arara` directive
 sequence (`pdflatex` → `biber` → `makeindex` → `pdflatex`). The arara
 pipeline gives chapter authors fine-grained control over build steps from
 inside the chapter source itself, which avoids hard-coding build logic in
-the platform. On success, the resulting PDF is uploaded to object storage,
-the user is emailed a download link, and the build is recorded in their
-personal library.
+the platform. The same chapter sources can also be typeset as a browsable
+HTML site through a parallel `lwarp`-based pipeline [@dunn:lwarp]: equations
+are rendered with MathJax and figures emitted as SVG, so the HTML preserves
+the same cross-references, citations, and index as the PDF. On success, the
+resulting PDF and/or HTML output is uploaded to object storage—the HTML as a
+downloadable zip that the user can also read online on the platform—the user
+is emailed a link, and the build is recorded in their personal library.
 
 **Personal library.** Users can re-download past builds, fork a previous
 book as the starting point for a new one, and view the version of each
