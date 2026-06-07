@@ -131,7 +131,14 @@ is emailed a link, and the build is recorded in their personal library.
 **Personal library.** Users can re-download past builds, fork a previous
 book as the starting point for a new one, and view the version of each
 chapter that was used in a given build—important because chapters evolve
-and a course needs to be reproducible across semesters.
+and a course needs to be reproducible across semesters. To make that
+reproducibility durable, a user can *freeze* a completed build: the platform
+copies its artifacts, together with a per-chapter record of the exact source
+commit used, into an immutable snapshot served from a stable, login-free
+share URL. An instructor can distribute that link to students or embed it in
+a learning-management system, and it continues to resolve to the identical
+book even as the underlying chapters—or the user's own editable copy—change
+or are deleted.
 
 **Open API.** All user-facing operations are also available through a
 documented REST API with a self-hosted Swagger UI and an OpenAPI 3 schema,
