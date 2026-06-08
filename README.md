@@ -36,12 +36,16 @@ JOSE compiles the paper for you during review, but if you want to preview:
 docker run --rm \
   -v "$PWD":/data \
   -u $(id -u):$(id -g) \
+  -e JOURNAL=jose \
   openjournals/inara \
   -o pdf,crossref paper.md
 ```
 
 `openjournals/inara` is the official JOSE/JOSS build container; it produces
-the same PDF the editors will see.
+the same PDF the editors will see. The `-e JOURNAL=jose` flag is required:
+the container **defaults to `joss`**, so without it the rendered PDF is
+branded as the *Journal of Open Source Software* instead of the *Journal of
+Open Source Education*.
 
 ## How to submit
 
