@@ -11,7 +11,9 @@ tags:
   - Django
   - React
 authors:
-  - name: Marc De Graef
+  - given-names: Marc
+    non-dropping-particle: De
+    surname: Graef
     orcid: 0000-0002-4721-6226
     corresponding: true
     affiliation: 1
